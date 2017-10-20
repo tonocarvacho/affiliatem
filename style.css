@@ -507,9 +507,13 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 .main-navigation {
 	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: space-between #site-navigation;
+	    -ms-flex-pack: space-between #site-navigation;
+	        justify-content: space-between #site-navigation;
+	justify-content-width: 100%;
 }
 
 .main-navigation ul {
@@ -659,32 +663,6 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
-.clear:before,
-.clear:after,
-.entry-content:before,
-.entry-content:after,
-.comment-content:before,
-.comment-content:after,
-.site-header:before,
-.site-header:after,
-.site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after {
-	content: "";
-	display: table;
-	table-layout: fixed;
-}
-
-.clear:after,
-.entry-content:after,
-.comment-content:after,
-.site-header:after,
-.site-content:after,
-.site-footer:after {
-	clear: both;
-}
-
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
@@ -700,6 +678,32 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Global layout
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+/*
+Header Menu
+*/
+#masthead {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+/*
+site-brand
+*/
+.custom-logo {
+	max-height: 3em;
+	width: auto;
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -847,3 +851,5 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+/*# sourceMappingURL=../affiliatem/sass/maps/style.css.map */
