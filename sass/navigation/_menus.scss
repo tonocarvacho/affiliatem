@@ -1,8 +1,32 @@
-.main-navigation {
-	clear: both;
-	display: flex;
-	justify-content: space-between;
+.site-branding {
+    display: flex;
+}
+#primary-menu {
+    width: 100%;
+}
+@include break($qry_lg) {
+.main-navigation ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: end;
+	}
 
+}
+@include break($qry_md) {
+#site-navigation {
+	width: 65%;
+}
+.site-branding {
+    width: 35%;
+    flex: 1 0 auto
+}
+
+}
+
+
+
+.main-navigation {
+	display: flex;
 
 
 	ul {
@@ -13,7 +37,6 @@
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
 			position: absolute;
 			top: 100%;
 			left: -999em;
@@ -51,7 +74,6 @@
 	}
 
 	li {
-		float: left;
 		position: relative;
 
 		&:hover > a,
@@ -82,9 +104,18 @@
 		display: none;
 	}
 	.main-navigation ul {
-		display: block;
+		display: flex;
 	}
 }
+
+@include break($qry_sm) {
+.main-navigation ul {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+}
+
 
 .comment-navigation,
 .posts-navigation,
@@ -96,12 +127,10 @@
 	}
 
 	.nav-previous {
-		float: left;
 		width: 50%;
 	}
 
 	.nav-next {
-		float: right;
 		text-align: right;
 		width: 50%;
 	}
